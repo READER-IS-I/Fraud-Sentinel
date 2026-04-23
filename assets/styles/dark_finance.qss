@@ -1,0 +1,653 @@
+﻿QWidget {
+    background: transparent;
+    color: #F5F7FB;
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Segoe UI", "PingFang SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    font-size: 14px;
+    selection-background-color: rgba(53, 208, 255, 0.28);
+    selection-color: #F7FBFF;
+}
+
+QWidget:disabled {
+    color: #61758C;
+}
+
+#windowRoot {
+    background: transparent;
+}
+
+#sidebar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(7, 17, 30, 0.98),
+        stop:0.42 rgba(8, 21, 36, 0.98),
+        stop:1 rgba(10, 24, 40, 0.98));
+    border-right: 1px solid rgba(110, 170, 230, 0.10);
+}
+
+#pageStack, #pageScroll {
+    background: transparent;
+}
+
+#sidebarNavScroll, #sidebarNavContainer {
+    background: transparent;
+    border: none;
+}
+
+#brandPanel {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(12, 27, 45, 0.98),
+        stop:0.64 rgba(11, 24, 40, 0.96),
+        stop:1 rgba(10, 19, 33, 0.95));
+    border: 1px solid rgba(110, 170, 230, 0.14);
+    border-radius: 22px;
+    padding: 2px;
+    margin-bottom: 8px;
+}
+
+#brandBadge {
+    min-width: 54px;
+    max-width: 54px;
+    min-height: 54px;
+    max-height: 54px;
+    border-radius: 27px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(74, 194, 255, 0.98),
+        stop:1 rgba(106, 113, 255, 0.94));
+    color: #06111D;
+    font-size: 20px;
+    font-weight: 900;
+    padding-bottom: 1px;
+}
+
+#sidebarTitleCn {
+    font-size: 24px;
+    font-weight: 900;
+    color: #F8FBFF;
+    min-height: 36px;
+    max-height: 36px;
+}
+
+#sidebarTitleEn {
+    font-size: 28px;
+    font-weight: 900;
+    color: #F8FBFF;
+    min-height: 42px;
+    max-height: 42px;
+    letter-spacing: 0px;
+}
+
+#sidebarSubtitle {
+    color: #93A9C4;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 24px;
+}
+
+#navSectionLabel {
+    color: #7FA1C4;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 8px 6px 8px;
+}
+
+#sidebarFooter {
+    color: #7890AB;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 10px 8px 0 8px;
+    border-top: 1px solid rgba(110, 170, 230, 0.10);
+}
+
+#contentWrapper {
+    background: rgba(7, 17, 30, 0.18);
+}
+
+#topBar {
+    background: rgba(12, 27, 45, 0.84);
+    border: 1px solid rgba(110, 170, 230, 0.14);
+    border-radius: 18px;
+}
+
+#pageViewport {
+    background: rgba(9, 22, 37, 0.58);
+    border: 1px solid rgba(110, 170, 230, 0.08);
+    border-radius: 20px;
+    padding: 1px;
+}
+
+QWidget#plotCanvas {
+    background: rgba(9, 22, 37, 0.92);
+    border: 1px solid rgba(110, 170, 230, 0.10);
+    border-radius: 14px;
+}
+
+#pageTitle {
+    font-size: 26px;
+    font-weight: 800;
+    color: #F6F9FF;
+}
+
+#pageSubtitle {
+    font-size: 13px;
+    color: #9CB2C9;
+}
+
+#navButton {
+    text-align: left;
+    padding: 14px 18px;
+    min-height: 50px;
+    border-radius: 16px;
+    border: 1px solid rgba(110, 170, 230, 0.08);
+    background: rgba(12, 25, 42, 0.42);
+    color: #C2D2E8;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#navButton:hover {
+    background: rgba(18, 39, 64, 0.82);
+    border: 1px solid rgba(53, 208, 255, 0.18);
+    color: #F7FBFF;
+}
+
+#navButton:pressed {
+    background: rgba(14, 31, 50, 0.94);
+    padding-left: 20px;
+}
+
+#navButton[active="true"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8C6B2F,
+        stop:0.5 #D6B57A,
+        stop:1 #F2D16B);
+    border: 1px solid rgba(231, 201, 139, 0.60);
+    border-radius: 16px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+#navButton[active="true"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #9C7735,
+        stop:0.5 #E7C98B,
+        stop:1 #FFE08A);
+    border: 1px solid #E7C98B;
+    color: #FFFFFF;
+}
+
+#card, #heroCard, #capabilityCard, #metricCard, #toastCard {
+    background: rgba(12, 27, 45, 0.92);
+    border: 1px solid rgba(110, 170, 230, 0.14);
+    border-radius: 18px;
+}
+
+#heroCard {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(13, 31, 52, 0.96),
+        stop:0.5 rgba(12, 28, 47, 0.96),
+        stop:1 rgba(10, 21, 36, 0.94));
+}
+
+#capabilityCard {
+    background: rgba(13, 28, 46, 0.92);
+}
+
+#cardHeader {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(110, 170, 230, 0.10);
+}
+
+#cardBody {
+    background: rgba(9, 22, 37, 0.72);
+    border: 1px solid rgba(110, 170, 230, 0.08);
+    border-radius: 16px;
+}
+
+#metricCard {
+    border-radius: 16px;
+}
+
+#metricAccentBar {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: rgba(53, 208, 255, 0.90);
+}
+
+#metricAccentBar[accent="cyan"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #35D0FF, stop:1 #2496F3);
+}
+
+#metricAccentBar[accent="gold"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #F0C86A, stop:1 #C9972D);
+}
+
+#metricAccentBar[accent="danger"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #F97316, stop:1 #EA580C);
+}
+
+#metricAccentBar[accent="success"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #27D17F, stop:1 #11B56A);
+}
+
+#metricBody {
+    background: rgba(11, 25, 41, 0.90);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+#cardTitle {
+    font-size: 18px;
+    font-weight: 800;
+    color: #F4F8FF;
+}
+
+#cardSubtitle, #metricDetail, #bodyText {
+    color: #9CB2C9;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#heroTitle {
+    font-size: 34px;
+    font-weight: 900;
+    color: #FBFDFF;
+}
+
+#heroSubtitle {
+    color: #35D0FF;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#heroDescription {
+    color: #D6E1F0;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+#heroStat, #valueTile {
+    background: rgba(9, 22, 37, 0.80);
+    border: 1px solid rgba(110, 170, 230, 0.12);
+    border-radius: 16px;
+}
+
+#heroStatTitle, #metricTitle, #valueTileTitle {
+    color: #88A1BE;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#heroStatValue, #metricValue, #valueTileValue, #resultValue {
+    color: #FBFDFF;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+#heroStatDetail {
+    color: #AFC2D8;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+#capabilityIndex {
+    color: #35D0FF;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#capabilityTitle {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#capabilityDesc {
+    color: #8FA4C0;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#fieldLabel, #sectionLabel {
+    color: #BFD0E3;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+QLineEdit, QTextEdit, QPlainTextEdit, QComboBox, QSpinBox, QDoubleSpinBox, QTableWidget, QTabWidget::pane {
+    background: rgba(9, 22, 37, 0.94);
+    border: 1px solid rgba(110, 170, 230, 0.14);
+    border-radius: 12px;
+    padding: 11px 13px;
+    color: #F2F7FF;
+}
+
+QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox {
+    min-height: 22px;
+}
+
+QLineEdit:hover, QTextEdit:hover, QPlainTextEdit:hover, QComboBox:hover, QSpinBox:hover, QDoubleSpinBox:hover, QTableWidget:hover {
+    border: 1px solid rgba(124, 108, 255, 0.22);
+}
+
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus, QComboBox:focus, QSpinBox:focus, QDoubleSpinBox:focus, QTableWidget:focus {
+    border: 1px solid rgba(53, 208, 255, 0.44);
+    background: rgba(10, 24, 39, 0.98);
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 28px;
+}
+
+QComboBox::down-arrow {
+    width: 12px;
+    height: 12px;
+}
+
+QTableWidget {
+    gridline-color: rgba(110, 170, 230, 0.06);
+    alternate-background-color: rgba(11, 24, 40, 0.76);
+    selection-background-color: rgba(53, 208, 255, 0.14);
+    outline: none;
+}
+
+QTableWidget::item {
+    padding: 8px 10px;
+    border: none;
+}
+
+QHeaderView::section, QTableCornerButton::section {
+    background: rgba(11, 24, 39, 0.98);
+    color: #D6E3F5;
+    border: none;
+    border-bottom: 1px solid rgba(110, 170, 230, 0.10);
+    padding: 11px 8px;
+    font-weight: 800;
+}
+
+QPushButton#actionButton {
+    min-height: 42px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(110, 170, 230, 0.14);
+    background: rgba(14, 28, 46, 0.94);
+    color: #EEF5FF;
+    font-weight: 700;
+}
+
+QPushButton#actionButton:hover {
+    border: 1px solid rgba(110, 170, 230, 0.22);
+    background: rgba(18, 36, 58, 0.98);
+}
+
+QPushButton#actionButton:pressed {
+    background: rgba(10, 22, 35, 0.98);
+    padding-top: 11px;
+    padding-bottom: 9px;
+}
+
+QPushButton#actionButton:disabled {
+    background: rgba(15, 27, 42, 0.58);
+    border: 1px solid rgba(110, 170, 230, 0.06);
+    color: #60748C;
+}
+
+QPushButton#actionButton[variant="primary"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #46DEFF, stop:0.58 #2DABFF, stop:1 #5D7CFF);
+    border: 1px solid rgba(83, 221, 255, 0.42);
+    color: #04111B;
+    font-weight: 900;
+}
+
+QPushButton#actionButton[variant="primary"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #68E5FF, stop:0.58 #47B6FF, stop:1 #748BFF);
+}
+
+QPushButton#actionButton[variant="primary"][engaged="true"],
+QPushButton#actionButton[variant="primary"]:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #F5D77A, stop:0.56 #E5B94B, stop:1 #C58D2A);
+    border: 1px solid rgba(245, 215, 122, 0.55);
+    color: #161006;
+}
+
+QPushButton#actionButton[variant="secondary"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(18, 35, 58, 0.96), stop:1 rgba(30, 40, 78, 0.96));
+    border: 1px solid rgba(124, 108, 255, 0.18);
+    color: #EAF1FF;
+}
+
+QPushButton#actionButton[variant="secondary"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(26, 48, 78, 0.98), stop:1 rgba(46, 55, 96, 0.98));
+    border: 1px solid rgba(124, 108, 255, 0.30);
+}
+
+QPushButton#actionButton[variant="ghost"] {
+    background: rgba(16, 31, 50, 0.82);
+    border: 1px solid rgba(53, 208, 255, 0.16);
+    color: #E9F2FF;
+}
+
+QPushButton#actionButton[variant="ghost"]:hover {
+    background: rgba(22, 42, 68, 0.92);
+    border: 1px solid rgba(53, 208, 255, 0.28);
+}
+
+QPushButton#actionButton[variant="danger"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(249, 115, 22, 0.94), stop:1 rgba(234, 88, 12, 0.94));
+    border: 1px solid rgba(249, 115, 22, 0.24);
+    color: #FFF7F1;
+}
+
+QPushButton#actionButton[variant="danger"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(251, 146, 60, 0.96), stop:1 rgba(249, 115, 22, 0.96));
+}
+
+QPushButton#actionButton[variant="icon"] {
+    min-width: 40px;
+    max-width: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 32, 51, 0.96), stop:1 rgba(25, 42, 72, 0.96));
+    border: 1px solid rgba(83, 221, 255, 0.16);
+}
+
+QPushButton#actionButton[variant="icon"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(20, 42, 68, 0.98), stop:1 rgba(42, 57, 96, 0.98));
+    border: 1px solid rgba(83, 221, 255, 0.28);
+}
+
+QProgressBar {
+    background: rgba(8, 19, 31, 0.92);
+    border: 1px solid rgba(110, 170, 230, 0.12);
+    border-radius: 10px;
+    text-align: center;
+    min-height: 18px;
+    color: #EDF4FF;
+}
+
+QProgressBar::chunk {
+    border-radius: 8px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #35D0FF,
+        stop:0.68 #2496F3,
+        stop:1 #7C6CFF);
+}
+
+#infoBadge {
+    border-radius: 12px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 800;
+    background: rgba(15, 28, 45, 0.92);
+    color: #DCE9F9;
+    border: 1px solid rgba(110, 170, 230, 0.12);
+}
+
+#infoBadge[tone="success"] {
+    color: #27D17F;
+    background: rgba(11, 46, 36, 0.92);
+    border: 1px solid rgba(39, 209, 127, 0.18);
+}
+
+#infoBadge[tone="accent"] {
+    color: #35D0FF;
+    background: rgba(11, 39, 54, 0.94);
+    border: 1px solid rgba(53, 208, 255, 0.16);
+}
+
+#infoBadge[tone="warning"] {
+    color: #F1D789;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(64, 48, 19, 0.88), stop:1 rgba(85, 61, 20, 0.82));
+    border: 1px solid rgba(224, 183, 84, 0.30);
+}
+
+QTabWidget::pane {
+    margin-top: 10px;
+}
+
+QTabBar::tab {
+    background: rgba(12, 25, 41, 0.88);
+    border: 1px solid rgba(110, 170, 230, 0.10);
+    border-radius: 12px;
+    padding: 10px 18px;
+    margin-right: 8px;
+    color: #AEBFD6;
+    min-width: 120px;
+    font-weight: 700;
+}
+
+QTabBar::tab:hover {
+    background: rgba(16, 33, 53, 0.96);
+    color: #F7FBFF;
+}
+
+QTabBar::tab:selected {
+    background: rgba(19, 43, 68, 0.98);
+    border: 1px solid rgba(53, 208, 255, 0.24);
+    color: #FFFFFF;
+}
+
+#logPanel {
+    background: rgba(7, 15, 25, 0.98);
+    color: #C5D5E8;
+    border: 1px solid rgba(110, 170, 230, 0.12);
+    border-radius: 12px;
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Segoe UI", sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+#riskBadge {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(16, 28, 43, 0.92);
+    font-weight: 800;
+    border: 1px solid rgba(110, 170, 230, 0.10);
+}
+
+#riskBadge[level="high"] {
+    color: #FFB089;
+    background: rgba(72, 29, 17, 0.80);
+    border: 1px solid rgba(249, 115, 22, 0.18);
+}
+
+#riskBadge[level="mid"] {
+    color: #F2C76B;
+    background: rgba(73, 55, 16, 0.78);
+    border: 1px solid rgba(240, 200, 106, 0.14);
+}
+
+#riskBadge[level="low"] {
+    color: #47D9A9;
+    background: rgba(15, 61, 48, 0.78);
+    border: 1px solid rgba(39, 209, 127, 0.14);
+}
+
+#toastCard {
+    background: rgba(10, 23, 38, 0.96);
+    border: 1px solid rgba(110, 170, 230, 0.16);
+    border-radius: 16px;
+}
+
+#toastAccent {
+    min-width: 5px;
+    max-width: 5px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background: #35D0FF;
+}
+
+#toastAccent[tone="info"] {
+    background: #35D0FF;
+}
+
+#toastAccent[tone="success"] {
+    background: #27D17F;
+}
+
+#toastAccent[tone="warning"] {
+    background: #F0C86A;
+}
+
+#toastAccent[tone="error"] {
+    background: #F97316;
+}
+
+#toastTitle {
+    color: #F8FBFF;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#toastMessage {
+    color: #9CB2C9;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+QScrollArea, #pageScroll {
+    background: transparent;
+    border: none;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 6px 0 6px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(124, 145, 171, 0.22);
+    border-radius: 5px;
+    min-height: 32px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgba(53, 208, 255, 0.26);
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 0 6px 0 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background: rgba(124, 145, 171, 0.22);
+    border-radius: 5px;
+    min-width: 32px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: rgba(53, 208, 255, 0.26);
+}
+
+QScrollBar::add-line, QScrollBar::sub-line, QScrollBar::add-page, QScrollBar::sub-page {
+    background: transparent;
+    border: none;
+}

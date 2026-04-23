@@ -1,0 +1,44 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local configuration and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# Logs and runtime output
+logs/
+*.log
+outputs/
+
+# Build artifacts
+build/
+dist/
+*.spec.bak
+
+# Local datasets and generated training artifacts
+data/*.csv
+!data/demo/
+!data/demo/*.csv
+models/keys/
+models/training_runs/
+models/demo_runs/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

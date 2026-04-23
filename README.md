@@ -1,4 +1,4 @@
-# 金融智盾 FraudShield
+# 金鉴智防 FraudShield
 
 金融智盾 FraudShield 是一个基于 `PySide6 + PyTorch + scikit-learn + imbalanced-learn + cryptography` 构建的 Windows 本地桌面端金融欺诈检测原型系统。
 

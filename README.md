@@ -109,22 +109,29 @@ dist\FraudShield\
 
 ```text
 FraudShield/
-?? app.py
-?? requirements.txt
-?? requirements-build.txt
-?? FraudShield.spec
-?? build_release.bat
-?? run_app.bat
-?? installer/
-?  ?? FraudShield.iss
-?? assets/
-?? data/
-?  ?? demo/
-?? examples/
-?? models/
-?? outputs/
-?? src/
-```
+|-- app.py
+|-- requirements.txt
+|-- requirements-build.txt
+|-- FraudShield.spec
+|-- build_release.bat
+|-- run_app.bat
+|-- installer/
+|   `-- FraudShield.iss
+|-- assets/
+|   `-- styles/
+|-- data/
+|   `-- demo/
+|-- examples/
+|-- src/
+|   |-- core/
+|   |-- ui/
+|   |-- utils/
+|   `-- workers/
+|-- models/      # 本地模型与训练产物，默认不上传 GitHub
+|-- outputs/     # 本地运行输出，默认不上传 GitHub
+|-- logs/        # 本地日志，默认不上传 GitHub
+`-- README.md
+
 
 ## 备注
 
